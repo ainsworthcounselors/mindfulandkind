@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express();
+const router = express.Router();
 const Note = require('../models/note');
 
 
@@ -32,8 +32,5 @@ router.delete('/:id', (req, res) => {
   Note.findByIdAndRemove(id);
   res.status(200).json({ message: 'successfully deleted' });
 });
-
-
-
 
 module.exports = router;
