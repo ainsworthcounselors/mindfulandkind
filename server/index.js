@@ -6,13 +6,13 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 //set up environment variable 
-dotenv.config({path: path.join(__dirname, '.env')});
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 //grab the mongo uri from the environment 
 const { MONGO_URI } = process.env;
 
 //connect to the database
-mongoose.connect(MONGO_URI, {useNewUrlParser: true});
+mongoose.connect(MONGO_URI, { useNewUrlParser: true });
 
 const port = process.env.PORT || 8080;
 
@@ -33,6 +33,13 @@ server.use(express.static(staticPath));
 
 //routers: use
 server.use('/api/notes', routers.notes);
+
+if(process.env.NODE_ENV === 'production') {
+  server.use('*', (req, res) => {
+    const index = path.join(staticPath, 'index.html');
+    res.sendFile(index);
+  });
+}
 
 server.listen(port, () => {
   console.log(`Now listening on port: ${port}`);
