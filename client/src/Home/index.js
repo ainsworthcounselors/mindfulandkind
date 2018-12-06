@@ -35,19 +35,6 @@ class HomeContainer extends Component {
   //       .catch(err => this.setState({ error: err }));
   // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   create = () => {
     noteService.create(this.state)
       .then(_ => {
