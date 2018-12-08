@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 .vh-100 {
     height: 100vh;
 }
@@ -91,4 +90,24 @@
 }
 .fw8 {
     font-size: 4rem;
+}
+
+.menu {
+    height: 30px;
+    background: salmon;
+}
+.mk-button {
+    height: 2rem;
+    border-style: thick;
+    border-color: black;
+}
+.submit-button {
+    border-style: thick;
+    border-color: black;
+}
+.home-button {
+    background: salmon;
+}
+.notes-list {
+    background: salmon;
 }

@@ -20,19 +20,14 @@ export default class HomeView extends Component {
     this.setState({ isOpen: !isOpen });
   };
   render() {
-    // const { coords, error } = this.props;
-    // const { latitude, longitude } = coords;
     const { isOpen } = this.state;
     // if(error) return <ErrorView />
     return (
       <React.Fragment>
         <section className="flex flex-column flex-grow-1 justify-content-center align-items-center ">
-          {/* <p className="fw4 m-1">Latitude: {latitude}</p>
-          <p className="fw4 m-1">Longitude: {longitude}</p> */}
           <button 
             onClick={this.toggleModal}
-            // disabled={!(latitude && longitude)}
-            className="fw4 input-reset p-4 m-1"
+            className="mk-button"
           >Submit a Mindful {"&"} Kind Note</button>
         </section>
         <Modal
@@ -49,9 +44,5 @@ export default class HomeView extends Component {
 }
 
 HomeView.propTypes = {
-  coords: PropTypes.shape({
-    latitude: PropTypes.number,
-    longitude: PropTypes.number
-  }).isRequired,
   text: PropTypes.string.isRequired
 };

@@ -1,39 +1,15 @@
 import React, { Component } from "react";
 import HomeView from "./View";
 import * as noteService from '../services/notes';
-import * as locationService from '../services/location';
 
 class HomeContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      coords: {},
       text: "",
       error: null
     };
   }
-
-  async componentDidMount() {
-    try {
-      const coords = await locationService.current();
-      this.setState({
-        coords: coords
-      });
-    } catch (err) {
-      this.setState({
-        error: err
-      });
-    }
-  }
-
-  // USING .THEN and .CATCH
-  // componentDidMount() {
-  //   locationService.current()
-  //       .then(coords => {
-  //         this.setState({ coords: coords });
-  //       })
-  //       .catch(err => this.setState({ error: err }));
-  // }
 
   create = () => {
     noteService.create(this.state)

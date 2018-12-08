@@ -9,10 +9,6 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  coords: {
-    type: Object,
-    required: true
-  },
   CreatedAt: {
     type: Date,
     required: true,

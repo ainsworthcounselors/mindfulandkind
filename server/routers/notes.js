@@ -22,8 +22,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const { text, coords } = req.body;
-    const note = new Note({ text, coords });
+    const { text } = req.body;
+    const note = new Note({ text });
     await note.save();
     res.status(201).json({ message: 'successful' });
   } catch (e) {

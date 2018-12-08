@@ -25,7 +25,7 @@ const Form = props => {
         />
       </div>
       <div className="m-1">
-        <button type="submit" className="input-reset fw4 p-4">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </div>
     </form>
   );
