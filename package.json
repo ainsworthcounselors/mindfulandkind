@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justin1dennison/one-for-the-road.git"
+    "url": "git+https://github.com/ainsworthcounselors/mindfulandkind.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justin1dennison/one-for-the-road/issues"
+    "url": "https://github.com/ainsworthcounselors/mindfulandkind/issues"
   },
-  "homepage": "https://github.com/justin1dennison/one-for-the-road#readme",
+  "homepage": "https://github.com/ainsworthcounselors/mindfulandkind#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^9.0.0",
